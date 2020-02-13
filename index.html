@@ -29,36 +29,74 @@ body, html {
 <!-- Links (sit on top) -->
 <div class="w3-top">
   <div class="w3-row w3-padding w3-black">
-    <div class="w3-col s3">
+    <div class="w3-col s2">
       <a href="#" class="w3-button w3-block w3-black">INICIO</a>
     </div>
-    <div class="w3-col s3">
+    <div class="w3-col s2">
       <a href="#about" class="w3-button w3-block w3-black">PIZZAS</a>
     </div>
-    <div class="w3-col s3">
+    <div class="w3-col s2">
+      <a href="#delivery" class="w3-button w3-block w3-black">DELIVERY</a>
+    </div>
+    <div class="w3-col s2">
       <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
     </div>
-    <div class="w3-col s3">
+    <div class="w3-col s2">
       <a href="#where" class="w3-button w3-block w3-black">DÓNDE</a>
-    </div>
-    <div class="w3-col s1">
-      <a href="https://www.facebook.com/Pizzeriadapaolinomalilla/" class="w3-button w3-block w3-black" target="_blank"><img src="facebook_m.png" alt="logo facebook" title="síguenos en facebook" width="20px"></a>
     </div>
   </div>
 </div>
 
 <!-- Header with image -->
-<header class="bgimg w3-display-container" id="home">
-  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
-    <span class="w3-text-white">::: Bernat Descoll 59, Malilla :::<br> Abrimos de martes a domingo de 19h a 23:30h </span>
+<div class="slider-container">
+  <div class="slider-control left inactive"></div>
+  <div class="slider-control right"></div>
+  <ul class="slider-pagi"></ul>
+  <div class="slider">
+    <div class="slide slide-0 active">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 350,405 0,405" />
+        </svg>
+        <div class='logo'><img class="logo" src='da_paolino.png' alt="Pizzeria Da Paolino"></div>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">PIZZERIA ITALIANA EN MALILLA</h2>
+          <p class="slide__text-desc">::: Bernat Descoll 59, Malilla :::<br>
+            Abrimos de martes a domingo<br><strong style="color:black">de 19h a 23:30h</strong></p>
+          <a href="tel:+34660708273" class="slide__text-link"><img src="phone.png" alt="telefono"> 660 708 273</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide-1 ">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">SERVICIO A DOMICILIO</h2>
+          <p class="slide__text-desc">::: Ahora te lo llevamos nosotros :::<br>Tu pizza en casa sin moverte del sofá</p>
+          <a href="tel:+34620489218" class="slide__text-link"><img src="food.png" alt="telefono"> 620 489 218</a>
+        </div>
+      </div>
+    </div>
+    <div class="slide slide-2">
+      <div class="slide__bg"></div>
+      <div class="slide__content">
+        <svg class="slide__overlay" viewBox="0 0 720 405" preserveAspectRatio="xMaxYMax slice">
+          <path class="slide__overlay-path" d="M0,0 150,0 500,405 0,405" />
+        </svg>
+        <div class="slide__text">
+          <h2 class="slide__text-heading">ELABORACIÓN ARTESANAL</h2>
+          <p class="slide__text-desc">::: Productos naturales y de temporada :::<br>Masa fresca artesana realizada a diario</p>
+          <a class="slide__text-link" href="#menu"><img src="menu.png" alt="icono menú"> Nuestra Carta</a>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="w3-display-middle w3-center">
-<!--     <span class="w3-text-white" style="font-size:20px">RESERVA TU PIZZA<br>632 974 865</span> -->
-  </div>
-  <div class="w3-display-bottomright w3-center w3-padding-large">
-    <span class="w3-text-white" style="font-size:22px">:: RESERVA TU PIZZA ::<br>:: 660 708 273 ::</span>
-  </div>
-</header>
+</div>
+
 
 <!-- Add a background color and large text to the whole page -->
 <div class="w3-sand w3-large">
@@ -76,129 +114,175 @@ body, html {
       <p><i>"Usamos los productos que la naturaleza nos da en su punto exacto: ni demasiado pronto, ni demasiado tarde" La frescura es la nueva dulzura.</i></p>
       <p>Chef & Propietario: Paolo Sommavilla</p>
     </div>
-    <img src="imagen-3.jpg" alt="Pizza Salutare" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <img src="imagen-3.jpg" alt="Masa artesana" style="width:100%;max-width:1000px" class="w3-margin-top">
     <p><strong>Horario:</strong> abierto de martes a domingo de 19:00h a 23:30h</p>
     <p><strong>Pedidos a domicilio:</strong> martes a domingo de 20:00h a 23:00h</p>
     <p><strong>Dirección:</strong> Bernat Descoll 59, Malilla</p>
   </div>
 </div>
+  <!-- Delivery Container -->
+  <div class="w3-container" id="delivery">
+    <div class="w3-content delivery" style="max-width:700px">
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REPARTO A DOMICILIO</span></h5>
+      <p class="w3-center"><strong> ::: REPARTO GRATIS A PARTIR DE 15€ :::<br>
+        <span class="w3-text-grey">¿Estas tranquilo en tu sofá y no te apetece salir de casa?</span></strong></p>
+        <p>No te preocupes! Nosotros te lo llevamos
+        sin coste adicional**(pedidos superiores a 15€).
+        Sólo tienes que llamar al número que te mostramos a continuación y pedirnos tu pizza favorita. </p>
+      <p><strong>Teléfono de Pedidos: </strong><a href="tel:+34620489218"> 620 489 218</a></p>
+      <p><strong>Horario de Pedidos: </strong> martes a domingo de 20:00h a 23:00h</p>
+      <p>*Los pedidos inferiores a 15€ tendran un suplemento de 2€</p>
+      <img src="pizza_3.jpg" alt="Pizza medio metro" style="width:100%;max-width:1000px" class="w3-margin-top">
+    </div>
+  </div>
 
 <!-- Menu Container -->
 <div class="w3-container" id="menu">
   <div class="w3-content" style="max-width:700px">
- 
+
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">MENU</span></h5>
-  
+
     <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Calzoni');">
+        <div class="w3-col s3 tablink">Calzoni</div>
+      </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
-        <div class="w3-col s6 tablink">Pizzas Clásicas</div>
+        <div class="w3-col s3 tablink">Pizzas Clásicas</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
-        <div class="w3-col s6 tablink">Pizzas Especiales</div>
+        <div class="w3-col s3 tablink">Pizzas Especiales</div>
       </a>
       <a href="javascript:void(0)" onclick="openMenu(event, 'Postres');">
-        <div class="w3-col s6 tablink">Focacce & Postres</div>
+        <div class="w3-col s3 tablink">Bebidas & Postres</div>
       </a>
     </div>
-
+    <div id="Calzoni" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Calzoni</h5>
+      <p>1. Calzone Liscio</p>
+      <p class="w3-text-grey">Mozzarella, jamón York, champiñones, albahaca |
+      <i style="font-size: 0.9em;">  7.50€</i></p>
+      <p>2. Calzone 4 Formaggi</p>
+      <p class="w3-text-grey">Mozzarella, talegglo, provolone, gordonzola, parmesano |
+      <i style="font-size: 0.9em;">  8.50€</i></p>
+      <p>3. Calzone Farcito</p>
+      <p class="w3-text-grey">Tomate, mozzarella, jamón York, champiñones, alcachofas |
+      <i style="font-size: 0.9em;">  8.50€</i></p>
+      <p>4. Lobo de Mar</p>
+      <p class="w3-text-grey">Medialuna rellena con mozzarella, bacalao ahumado, tomate cherry, pesto de perejil |
+      <i style="font-size: 0.9em;">  9.00€</i></p>
+    </div>
     <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
-      <h5>4. Marinara</h5>
-      <p class="w3-text-grey">Tomate, orégano, crema de ajo<br> 
-      <i style="font-size: 0.9em;"> Mediana 5.50€ | 1/2 Metro 11€</i></p>
-    
-      <h5>5. Margherita</h5>
+      <h5>5. Marinara</h5>
+      <p class="w3-text-grey">Tomate, orégano, aceite de ajo<br>
+      <i style="font-size: 0.9em;"> Mediana 6.00€ | 1/2 Metro 12€</i></p>
+
+      <h5>6. Margherita</h5>
       <p class="w3-text-grey">Tomate, mozzarella, albahaca <br>
-      <i style="font-size: 0.9em;"> Mediana 6€ | 1/2 Metro 12€</i></p>
-    
-      <h5>6. Búfala</h5>
-      <p class="w3-text-grey">Tomate, mozzarella de búfala, albahaca <br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-    
-      <h5>7. Nápoli</h5>
-      <p class="w3-text-grey">Tomate, anchoas, alcaparras, aceitunas, orégano <br>
       <i style="font-size: 0.9em;"> Mediana 6.50€ | 1/2 Metro 13€</i></p>
-    
-      <h5>8. Hawaiana</h5>
+
+      <h5>7. Búfala</h5>
+      <p class="w3-text-grey">Tomate, mozzarella de búfala, albahaca <br>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>8. Nápoli</h5>
+      <p class="w3-text-grey">Tomate, anchoas, alcaparras, aceitunas negras, orégano <br>
+      <i style="font-size: 0.9em;"> Mediana 7.00€ | 1/2 Metro 14€</i></p>
+
+      <h5>9. Hawaiana</h5>
       <p class="w3-text-grey">Tomate, mozzarella, jamón York, piña fresca <br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-      <h5>9. Bismarck</h5>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>10. Bismarck</h5>
       <p class="w3-text-grey">Tomate, mozzarella, panceta italiana, huevo, parmesano <br>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>11. Prosciutto</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, jamón Yorko<br>
       <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-      <h5>10. Calzone Liscio</h5>
-      <p class="w3-text-grey">Mozzarella, jamón York, champiñones, albahaca <br>
-      <i style="font-size: 0.9em;"> Mediano 7€</i></p>
-      <h5>11. Calzone Fantasía</h5>
-      <p class="w3-text-grey">Mozzarella, stracchino, chorizo italiano, pesto<br>
-      <i style="font-size: 0.9em;"> Mediano 8€</i></p>
-      <h5>12. Prosciutto Cotto e Funghi</h5>
+
+      <h5>12. Capricciosa</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, jamón York, champiñones, alcachofas, aceitunas negras<br>
+      <i style="font-size: 0.9em;"> Mediana 9.00€ | 1/2 Metro 18€</i></p>
+
+      <h5>13. Prosciutto Cotto e Funghi</h5>
       <p class="w3-text-grey">Tomate, mozzarella, champiñones, jamón York <br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-      <h5>13. Prosciutto Special</h5>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>14. Prosciutto Special</h5>
       <p class="w3-text-grey">Mozzarella, jamón, champiñones, parmesano, huevo <br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-      <h5>14. Diavola</h5>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>15. Diavola</h5>
       <p class="w3-text-grey">Tomate, mozzarella, chorizo italiano<br>
-      <i style="font-size: 0.9em;"> Mediana 7€ | 1/2 Metro 14€</i></p>
-      <h5>15. Formaggi</h5>
-      <p class="w3-text-grey">Mozzarella, gorgonzola, taleggio, parmesano<br>
-      <i style="font-size: 0.9em;"> Mediana 7€ | 1/2 Metro 14€</i></p>
-      <h5>16. Barbacoa</h5>
-      <p class="w3-text-grey">Tomate, mozzarella, panceta italiana, cebolla, maíz, salsa barbacoa casera <br>
-      <i style="font-size: 0.9em;"> Mediana 8€ | 1/2 Metro 16€</i></p>
-      <h5>17. Vegetariana</h5>
-      <p class="w3-text-grey">Tomate, mozzarella, calabacín, berenjena, pimiento, parmesano<br>
       <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
 
+      <h5>16. 4 Formaggi</h5>
+      <p class="w3-text-grey">Mozzarella, gorgonzola, taleggio, provolone, parmesano<br>
+      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
 
+      <h5>17. Barbacoa</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, pancetta italiana, cebolla, salsa barbacoa<br>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <h5>18. Vegetariana</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, calabacín, berenjena, pimiento, parmesano<br>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>19. Tonno e Cipolla</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, atún, cebolla, parmesano<br>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
     </div>
 
     <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
-      <h5>18. Campagnola</h5>
-      <p class="w3-text-grey">Mozzarella, calabacín, jamón York, stracchino<br>
-      <i style="font-size: 0.9em;"> Mediana 8€ | 1/2 Metro 16€</i></p>
-    
-      <h5>19. Amatriciana</h5>
+      <h5>20. Finocchiona</h5>
+      <p class="w3-text-grey">Mozzarella, queso asiago, alcachofas, salami dulce<br>
+      <i style="font-size: 0.9em;"> Mediana 8.00€ | 1/2 Metro 16€</i></p>
+
+      <h5>21. Amatriciana</h5>
       <p class="w3-text-grey">Tomate, panceta italiana, cebolla, parmesano <br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 16€</i></p>
-    
-      <h5>20. Tigre</h5>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <h5>22. Tigre</h5>
       <p class="w3-text-grey">Tomate, mozzarella, jamón serrano italiano, berenjena, taleggio<br>
-      <i style="font-size: 0.9em;"> Mediana 8€ | 1/2 Metro 16€</i></p>
-    
-      <h5>21. Hannibal</h5>
-      <p class="w3-text-grey">Tomate, mozzarella, jamón York, panceta italiana, longaniza italiana, chorizo italiano<br>
-      <i style="font-size: 0.9em;"> Mediana 9€ | 1/2 Metro 18€</i></p>
-    
-      <h5>22. Salutare</h5>
-      <p class="w3-text-grey">Tomate cherry, mozzarella, requesón italiano, bresaola<br>
-      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
-      <h5>23. Rústica</h5>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <h5>23. Hannibal</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, jamón York, panceta italiana, longaniza, chorizo italiano<br>
+      <i style="font-size: 0.9em;"> Mediana 9.50€ | 1/2 Metro 19€</i></p>
+
+      <h5>24. Winti</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, longaniza, queso scamorza, espinacas<br>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <h5>25. Rústica</h5>
       <p class="w3-text-grey">Tomate, mozzarella, tomate cherry, rúcula, parmesano<br>
-      <i style="font-size: 0.9em;"> Mediana 7€ | 1/2 Metro 14€</i></p>
-      <h5>24. Marittima</h5>
-      <p class="w3-text-grey">Mozzarella, atún, pimiento, maíz<br>
-      <i style="font-size: 0.9em;"> Mediana 7€ | 1/2 Metro 14€</i></p>
-      <h5>25. Esplosiva</h5>
-      <p class="w3-text-grey">Tomate, mozzarella, chorizo italiano, pimiento, cebolla, aceitunas, negras<br>
-      <i style="font-size: 0.9em;"> Mediana 8€ | 1/2 Metro 16€</i></p>
-      <h5>26. Raffinata</h5>
+      <i style="font-size: 0.9em;"> Mediana 7.50€ | 1/2 Metro 15€</i></p>
+
+      <h5>26. Polaster</h5>
+      <p class="w3-text-grey">Mozzarella, pechuga de pollo marinada, tomate cherry amarillo, aceitunas verdes<br>
+      <i style="font-size: 0.9em;"> Mediana 9.00€ | 1/2 Metro 18€</i></p>
+
+      <h5>27. Esplosiva</h5>
+      <p class="w3-text-grey">Tomate, mozzarella, chorizo italiano, pimiento, cebolla, aceitunas negras<br>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <h5>28. Raffinata</h5>
       <p class="w3-text-grey">Tomate, mozzarella de bufala, jamón serrano italiano<br>
-      <i style="font-size: 0.9em;"> Mediana 9€ | 1/2 Metro 18€</i></p>
+      <i style="font-size: 0.9em;"> Mediana 9.50€ | 1/2 Metro 19€</i></p>
+
+      <h5>29. Pizza del Mes</h5>
+      <p class="w3-text-grey">(Pregunta en caja)<br>
+      <i style="font-size: 0.9em;"> Mediana 8.50€ | 1/2 Metro 17€</i></p>
+
+      <p class="w3-text-grey">INGREDIENTES EXTRAS:<br>
+      <i style="font-size: 0.9em;">Mozzarella de bufala | Jamón serrano -- 2€ EXTRA<br>
+      Tomate cherry | Panceta -- 1€ EXTRA<br>
+      Resto -- 0.50€ EXTRA</i></p>
 
 
-    </div>  
-    
+    </div>
+
     <div id="Postres" class="w3-container menu w3-padding-48 w3-card">
-      <h5>Focacce</h5>
-      <p>1. Focaccia Sencilla</p>
-      <p class="w3-text-grey">Aceite, orégano, sal |
-      <i style="font-size: 0.9em;">  5.00€</i></p>
-      <p>2. Focaccia Amarilla</p>
-      <p class="w3-text-grey">Aceite, patatas, romero, sal |
-      <i style="font-size: 0.9em;">  5.00€</i></p>
-      <p>3. Focaccia Verde</p>
-      <p class="w3-text-grey">Cebolla, tomate cherry, pesto de albahaca, anchoas |
-      <i style="font-size: 0.9em;">  5.50€</i></p>
 
       <h5>Postres</h5>
       <p>Tiramisú | <i class="w3-text-grey">porción 3.00€</i></p>
@@ -206,33 +290,37 @@ body, html {
           <img src="carrot-cake.jpg" alt="Tarta carrot cake" style="width:100%;max-width:1000px;margin-top:32px;">
 
       <h5>Bebidas</h5>
-      <p>Coca-Cola | <i class="w3-text-grey">1.00€</i></p>
-      <p>Fanta de Naranja | <i class="w3-text-grey">1.00€</i></p>
-      <p>Fanta de Limón | <i class="w3-text-grey">1.00€</i></p>
-      <p>Nestea | <i class="w3-text-grey">1.00€</i></p>
-      <p>Cereveza bote | <i class="w3-text-grey">1.00€</i></p>
-      <p>Cerveza litro | <i class="w3-text-grey">2.00€</i></p>
-      <p>Agua 1.5L | <i class="w3-text-grey">1.00€</i></p>
-      <p>Coca-Cola 2L | <i class="w3-text-grey">2.00€</i></p>
-    </div>  
-
-    
+      <p>Coca-Cola 33cl | <i class="w3-text-grey">1.50€</i></p>
+      <p>Coca-Cola 2L | <i class="w3-text-grey">3.00€</i></p>
+      <p>Fanta de Naranja 33cl | <i class="w3-text-grey">1.50€</i></p>
+      <p>Fanta de Naranja 2L | <i class="w3-text-grey">3.00€</i></p>
+      <p>Fanta de Limón 33cl | <i class="w3-text-grey">1.50€</i></p>
+      <p>Nestea 33cl | <i class="w3-text-grey">1.50€</i></p>
+      <p>Aquarius Naranja / Limón 33cl | <i class="w3-text-grey">1.50€</i></p>
+      <p>Agua 1.5L | <i class="w3-text-grey">1.50€</i></p>
+      <p>Amstel bote | <i class="w3-text-grey">1.50€</i></p>
+      <p>Amstel litro | <i class="w3-text-grey">3.00€</i></p>
+      <p>Menabrea Rubia 33cl | <i class="w3-text-grey">2.50€</i></p>
+      <p>Menabrea Tostada 33cl | <i class="w3-text-grey">2.50€</i></p>
+      <p>Mosnter 33cl | <i class="w3-text-grey">2.50€</i></p>
+      <p>Lambrusco Tinto | <i class="w3-text-grey">6.00€</i></p>
+    </div>
+    <img src="bebidas.jpg" alt="cervezas" style="width:100%;max-width:1000px" class="w3-margin-top">
   </div>
 </div>
 
 <!-- Contact/Area Container -->
 <div class="w3-container" id="where" style="padding-bottom:32px;">
   <div class="w3-content" style="max-width:700px">
-    <img src="pizza_2.jpg" alt="Pizzas frescas" style="width:100%;max-width:1000px" class="w3-margin-top">
     <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">DÓNDE ESTAMOS</span></h5>
-    
+
     <p>Encuéntranos en el Carrer de Bernat Descoll, 59 en Malilla.</p>
     <p><u>Horario de la pizzeria</u>: de martes a domingo de 19:00h a 23:30h</p>
     <p><u>Pedidos a domicilio</u>: de martes a domingo de 20:00h a 23:00h</p>
     <p>Llámanos al <a href="tel:+34660708273">660 708 273</a></p>
     <p>Pedidos a domicilio en el <a href="tel:+34620489218">620 489 218</a></p>
-    
-    
+
+
     <!-- <img src="/w3images/map.jpg" class="w3-image" style="width:100%"> -->
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3080.8260764248766!2d-0.3818748846332121!3d39.45066287948911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x96e730a61f64149d!2sPizzeria+Da+Paolino!5e0!3m2!1ses!2ses!4v1556211718097!5m2!1ses!2ses" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <!--     <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
@@ -258,7 +346,7 @@ body, html {
 <!--   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p> -->
   </div>
 </footer>
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="script.js"></script>
 <script>
 // Tabbed Menu
 function openMenu(evt, menuName) {
@@ -279,3 +367,4 @@ document.getElementById("myLink").click();
 
 </body>
 </html>
+
