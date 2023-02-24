@@ -1749,19 +1749,29 @@ color: grey;
   position: relative;
   padding: 0.5rem;
   cursor: pointer;
+  background: #6d961c;
+  color: white;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 1.8rem;
+  border-radius: 10px;
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
 a.slide__text-link{
 text-decoration: none;
 }
+.filter-white{
+    filter: invert(100%);
+}
+.underline{
+    text-decoration: underline;
+    color: #016932;
+}
 /*@media (max-width: 991px) {
   .slide__text-link {
     display: none;
   }
-}*/
+}
 .slide__text-link:before {
   z-index: -1;
   content: "";
@@ -1784,10 +1794,10 @@ text-decoration: none;
 .slide__text-link:hover:before {
   -webkit-transform: rotateX(0);
           transform: rotateX(0);
-}
+}*/
 
 .logo {
-  height: 90%
+  height: 90%;
   width: auto;
   text-align: center;
   margin: 15px auto;
@@ -1807,4 +1817,13 @@ text-decoration: none;
 background-image: url('fondo_delivery.png');
 background-repeat: no-repeat;
 background-position: top;
+}
+.boton{
+background-color: #6d961c;
+color: #fff;
+display: inline-block;
+text-align: center;
+padding: .8em;
+border-radius: 10px;
+margin-top: 1em;
 }
